@@ -89,7 +89,7 @@ const Contact = () => {
 
               <span>
                 <FaEnvelope />
-                <p>Support@shopNow.com</p>
+                <p>Support@TrendiShop.com</p>
               </span>
 
               <span>

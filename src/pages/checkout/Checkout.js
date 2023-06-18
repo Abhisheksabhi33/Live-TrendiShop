@@ -44,7 +44,7 @@ const Checkout = () => {
     
     {cartItems.length === 0 ? navigate("/cart") : (
 
-    fetch("http://localhost:4242/create-payment-intent", {
+    fetch("https://trendishop.onrender.com/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

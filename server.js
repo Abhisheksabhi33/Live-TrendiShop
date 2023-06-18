@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.get("/", (req, res) => {
-  res.send("welcome to shopNow!");
+  res.send("welcome to TrendiShop!");
 });
 
 const array = [];

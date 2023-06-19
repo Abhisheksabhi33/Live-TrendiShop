@@ -1,6 +1,8 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
+  CALCULATE_SUBTOTAL,
+  CALCULATE_TOTAL_QUANTITY,
   selectCartItems,
   selectCartTotalAmount,
   selectCartTotalQuantity,
@@ -9,10 +11,23 @@ import { Link } from "react-router-dom";
 import styles from "./CheckoutSummary.module.scss";
 import Card from "../card/Card";
 
+
+
+
 function CheckoutSummary() {
   const cartItems = useSelector(selectCartItems);
   const totalQuantity = useSelector(selectCartTotalQuantity);
   const totalAmount = useSelector(selectCartTotalAmount);
+
+  const dispatch = useDispatch();
+
+  
+
+  useEffect(() => {
+    dispatch(CALCULATE_SUBTOTAL());
+    dispatch(CALCULATE_TOTAL_QUANTITY());
+
+  }, [dispatch, cartItems])
 
   return (
     <div>

@@ -33,7 +33,7 @@ const Checkout = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const description = `shopNow payment: email: ${customerEmail}, Amount: ${totalAmount}`;
+  const description = `TrendiNow payment: email: ${customerEmail}, Amount: ${totalAmount}`;
 
   useEffect(() => {
     dispatch(CALCULATE_SUBTOTAL());
